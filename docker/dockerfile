@@ -4,6 +4,4 @@ RUN apk --update add git unzip wget apache-ant maven curl bash openjdk8-jre pyth
 
 RUN git clone https://github.com/actnforchildren/vsaq
 
-RUN vsaq/do.sh install_deps
-
-RUN vsaq/do.sh build_prod
+RUN vsaq/do.sh install_deps && vsaq/do.sh build
